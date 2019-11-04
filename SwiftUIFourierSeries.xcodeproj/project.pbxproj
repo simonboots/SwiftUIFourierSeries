@@ -9,21 +9,40 @@
 /* Begin PBXBuildFile section */
 		0B2B5F9E23703300001DE7E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5F9D23703300001DE7E0 /* AppDelegate.swift */; };
 		0B2B5FA023703300001DE7E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5F9F23703300001DE7E0 /* SceneDelegate.swift */; };
-		0B2B5FA223703300001DE7E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FA123703300001DE7E0 /* ContentView.swift */; };
 		0B2B5FA423703300001DE7E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2B5FA323703300001DE7E0 /* Assets.xcassets */; };
 		0B2B5FA723703300001DE7E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2B5FA623703300001DE7E0 /* Preview Assets.xcassets */; };
 		0B2B5FAA23703300001DE7E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2B5FA823703300001DE7E0 /* LaunchScreen.storyboard */; };
+		0B2B5FB823703475001DE7E0 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FB323703475001DE7E0 /* ConfigView.swift */; };
+		0B2B5FB923703475001DE7E0 /* EpicirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FB423703475001DE7E0 /* EpicirclesView.swift */; };
+		0B2B5FBA23703475001DE7E0 /* EpicircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FB523703475001DE7E0 /* EpicircleView.swift */; };
+		0B2B5FBB23703475001DE7E0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FB623703475001DE7E0 /* GraphView.swift */; };
+		0B2B5FBC23703475001DE7E0 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FB723703475001DE7E0 /* SeriesView.swift */; };
+		0B2B5FC323703490001DE7E0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FBE2370348F001DE7E0 /* AppState.swift */; };
+		0B2B5FC423703490001DE7E0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FBF2370348F001DE7E0 /* Store.swift */; };
+		0B2B5FC523703490001DE7E0 /* GraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC023703490001DE7E0 /* GraphModel.swift */; };
+		0B2B5FC623703490001DE7E0 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC123703490001DE7E0 /* Timer.swift */; };
+		0B2B5FC723703490001DE7E0 /* FourierSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC223703490001DE7E0 /* FourierSeries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B2B5F9A23703300001DE7E0 /* SwiftUIFourierSeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFourierSeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2B5F9D23703300001DE7E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B2B5F9F23703300001DE7E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B2B5FA123703300001DE7E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B2B5FA323703300001DE7E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B2B5FA623703300001DE7E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B2B5FA923703300001DE7E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2B5FAB23703300001DE7E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2B5FB323703475001DE7E0 /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		0B2B5FB423703475001DE7E0 /* EpicirclesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicirclesView.swift; sourceTree = "<group>"; };
+		0B2B5FB523703475001DE7E0 /* EpicircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicircleView.swift; sourceTree = "<group>"; };
+		0B2B5FB623703475001DE7E0 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		0B2B5FB723703475001DE7E0 /* SeriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
+		0B2B5FBE2370348F001DE7E0 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		0B2B5FBF2370348F001DE7E0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0B2B5FC023703490001DE7E0 /* GraphModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphModel.swift; sourceTree = "<group>"; };
+		0B2B5FC123703490001DE7E0 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		0B2B5FC223703490001DE7E0 /* FourierSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourierSeries.swift; sourceTree = "<group>"; };
+		0B2B5FC823703554001DE7E0 /* SwiftUIFourierSeries.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIFourierSeries.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +75,10 @@
 		0B2B5F9C23703300001DE7E0 /* SwiftUIFourierSeries */ = {
 			isa = PBXGroup;
 			children = (
-				0B2B5F9D23703300001DE7E0 /* AppDelegate.swift */,
-				0B2B5F9F23703300001DE7E0 /* SceneDelegate.swift */,
-				0B2B5FA123703300001DE7E0 /* ContentView.swift */,
-				0B2B5FA323703300001DE7E0 /* Assets.xcassets */,
-				0B2B5FA823703300001DE7E0 /* LaunchScreen.storyboard */,
-				0B2B5FAB23703300001DE7E0 /* Info.plist */,
+				0B2B5FC823703554001DE7E0 /* SwiftUIFourierSeries.entitlements */,
+				0B2B5FB12370341E001DE7E0 /* App */,
+				0B2B5FBD2370347B001DE7E0 /* Model */,
+				0B2B5FB22370345D001DE7E0 /* Views */,
 				0B2B5FA523703300001DE7E0 /* Preview Content */,
 			);
 			path = SwiftUIFourierSeries;
@@ -73,6 +90,42 @@
 				0B2B5FA623703300001DE7E0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B2B5FB12370341E001DE7E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B5F9D23703300001DE7E0 /* AppDelegate.swift */,
+				0B2B5F9F23703300001DE7E0 /* SceneDelegate.swift */,
+				0B2B5FA323703300001DE7E0 /* Assets.xcassets */,
+				0B2B5FA823703300001DE7E0 /* LaunchScreen.storyboard */,
+				0B2B5FAB23703300001DE7E0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0B2B5FB22370345D001DE7E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B5FB323703475001DE7E0 /* ConfigView.swift */,
+				0B2B5FB423703475001DE7E0 /* EpicirclesView.swift */,
+				0B2B5FB523703475001DE7E0 /* EpicircleView.swift */,
+				0B2B5FB623703475001DE7E0 /* GraphView.swift */,
+				0B2B5FB723703475001DE7E0 /* SeriesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B2B5FBD2370347B001DE7E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B5FBE2370348F001DE7E0 /* AppState.swift */,
+				0B2B5FC223703490001DE7E0 /* FourierSeries.swift */,
+				0B2B5FC023703490001DE7E0 /* GraphModel.swift */,
+				0B2B5FBF2370348F001DE7E0 /* Store.swift */,
+				0B2B5FC123703490001DE7E0 /* Timer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2B5FB823703475001DE7E0 /* ConfigView.swift in Sources */,
+				0B2B5FC723703490001DE7E0 /* FourierSeries.swift in Sources */,
+				0B2B5FB923703475001DE7E0 /* EpicirclesView.swift in Sources */,
 				0B2B5F9E23703300001DE7E0 /* AppDelegate.swift in Sources */,
+				0B2B5FC423703490001DE7E0 /* Store.swift in Sources */,
+				0B2B5FC523703490001DE7E0 /* GraphModel.swift in Sources */,
+				0B2B5FC323703490001DE7E0 /* AppState.swift in Sources */,
+				0B2B5FBA23703475001DE7E0 /* EpicircleView.swift in Sources */,
 				0B2B5FA023703300001DE7E0 /* SceneDelegate.swift in Sources */,
-				0B2B5FA223703300001DE7E0 /* ContentView.swift in Sources */,
+				0B2B5FBB23703475001DE7E0 /* GraphView.swift in Sources */,
+				0B2B5FC623703490001DE7E0 /* Timer.swift in Sources */,
+				0B2B5FBC23703475001DE7E0 /* SeriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,16 +346,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIFourierSeries/SwiftUIFourierSeries.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIFourierSeries/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIFourierSeries/Info.plist;
+				INFOPLIST_FILE = SwiftUIFourierSeries/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.simonboots.SwiftUIFourierSeries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,16 +369,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIFourierSeries/SwiftUIFourierSeries.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIFourierSeries/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIFourierSeries/Info.plist;
+				INFOPLIST_FILE = SwiftUIFourierSeries/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.simonboots.SwiftUIFourierSeries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

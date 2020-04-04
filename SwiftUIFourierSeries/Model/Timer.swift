@@ -1,24 +1,35 @@
 import Combine
-import Foundation
+import UIKit
 
 final class Timer: ObservableObject {
     
     // MARK: - Properties
     
-    private let dt: Double
-    private let updatesPerSecond: Double
-    private var timer: Foundation.Timer?
-    private(set) var time: TimeInterval = 0.0
     let objectWillChange = PassthroughSubject<TimeInterval, Never>()
+
     var isRunning: Bool {
-        return timer?.isValid ?? false
+        return !displayLink.isPaused
+    }
+    
+    private let frequency: Double
+    private let unit: Double
+    private(set) var time: TimeInterval = 0.0
+    
+    private lazy var displayLink: CADisplayLink = {
+        let displayLink = CADisplayLink(target: self, selector: #selector(updateTime))
+        displayLink.add(to: .current, forMode: .default)
+        return displayLink
+    }()
+    
+    private var dt: Double {
+        return unit * frequency * displayLink.duration
     }
     
     // MARK: - Life cycle
     
-    init(frequency: Double = 1.0, unit: Double = 2 * .pi, updatesPerSecond: Double = 30.0) {
-        self.updatesPerSecond = updatesPerSecond
-        self.dt = unit * frequency / updatesPerSecond
+    init(frequency: Double = 1.0, unit: Double = 2 * .pi) {
+        self.frequency = frequency
+        self.unit = unit
     }
     
     deinit {
@@ -27,15 +38,12 @@ final class Timer: ObservableObject {
     
     // MARK: - Methods
     
-    func start() {
-        let timer = self.timer ?? makeTimer()
-        RunLoop.current.add(timer, forMode: .default)
-        self.timer = timer
+    func start() {        
+        displayLink.isPaused = false
     }
     
     func stop() {
-        timer?.invalidate()
-        timer = nil
+        displayLink.isPaused = true
     }
     
     func reset() {
@@ -44,17 +52,8 @@ final class Timer: ObservableObject {
     
     // MARK: - Private methods
     
-    private func updateTime() {
+    @objc private func updateTime() {
         time += dt
         objectWillChange.send(time)
-    }
-    
-    private func makeTimer() -> Foundation.Timer {
-        let timer = Foundation.Timer(timeInterval: TimeInterval(1.0 / self.updatesPerSecond), repeats: true) { [weak self] (timer) in
-            guard let self = self else { return }
-            self.updateTime()
-        }
-        
-        return timer
     }
 }

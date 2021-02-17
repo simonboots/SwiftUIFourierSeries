@@ -16,8 +16,6 @@ struct ConfigView: View {
                 // C
                 VStack {
                     Spacer()
-                    Text("V: Regular, H: Compact").padding()
-                    Spacer()
                     VStack {
                         ButtonsView(store: store).padding()
                         Spacer()
@@ -30,8 +28,6 @@ struct ConfigView: View {
                 // A B C
                 VStack {
                     Spacer()
-                    Text("V: Compact, H: Compact").padding()
-                    Spacer()
                     HStack {
                         ButtonsView(store: store).padding()
                         Spacer()
@@ -43,8 +39,6 @@ struct ConfigView: View {
                 // some "bigger" iPhone Landscape (iPhone Xs Max, 6s Plus, 7 Plus, 8 Plus, ...)
                 // A B C D
                 VStack {
-                    Spacer()
-                    Text("V: Compact, H: Regular").padding()
                     Spacer()
                     HStack {
                         ButtonsView(store: store)

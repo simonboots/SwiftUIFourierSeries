@@ -23,7 +23,7 @@ struct PickerView: View {
                     return Text(kind.rawValue).tag(kind)
                 }
             }
-        ).padding()
+        )
     }
 }
 

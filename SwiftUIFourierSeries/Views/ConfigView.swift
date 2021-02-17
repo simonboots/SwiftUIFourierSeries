@@ -3,46 +3,58 @@ import SwiftUI
 
 struct ConfigView: View {
     @ObservedObject var store: Store
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     
     var body: some View {
-        HStack {
-            VStack {
-                HStack {
-                    if self.store.state.timerIsRunning {
-                        Button("Pause") { self.store.send(.pause) }
-                    } else {
-                        Button("Play") { self.store.send(.play) }
+        // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/
+        Group {
+            if verticalSizeClass == .regular && horizontalSizeClass == .compact {
+                // iPhone Portrait or iPad 1/3 split view for Multitasking for instance
+                // A
+                // B
+                // C
+                VStack {
+                    Spacer()
+                    Text("V: Regular, H: Compact").padding()
+                    Spacer()
+                    VStack {
+                        ButtonsView(store: store).padding()
+                        Spacer()
+                        PickerView(store: store).padding()
                     }
-                    Button("Reset") { self.store.send(.reset) }
+                    Spacer()
                 }
-                .padding()
-
-                HStack {
-                    Text("Number of functions:")
-                    Button("-") { self.store.send(.decrementnumOfFunctions) }
-                        .disabled(self.store.state.numOfFunctions <= 1)
-                    Text("\(self.store.state.numOfFunctions)")
-                    Button("+") { self.store.send(.incrementnumOfFunctions) }
+            } else if verticalSizeClass == .compact && horizontalSizeClass == .compact {
+                // some "standard" iPhone Landscape (iPhone SE, X, XS, 7, 8, ...)
+                // A B C
+                VStack {
+                    Spacer()
+                    Text("V: Compact, H: Compact").padding()
+                    Spacer()
+                    HStack {
+                        ButtonsView(store: store).padding()
+                        Spacer()
+                        PickerView(store: store).padding()
+                    }
+                    Spacer()
                 }
-                
+            } else if verticalSizeClass == .compact && horizontalSizeClass == .regular {
+                // some "bigger" iPhone Landscape (iPhone Xs Max, 6s Plus, 7 Plus, 8 Plus, ...)
+                // A B C D
+                VStack {
+                    Spacer()
+                    Text("V: Compact, H: Regular").padding()
+                    Spacer()
+                    HStack {
+                        ButtonsView(store: store)
+                        Spacer()
+                        PickerView(store: store)
+                    }
+                    Spacer()
+                }
             }
-            
-            Spacer()
-            
-            Picker(selection:
-                Binding(
-                    get: { self.store.state.seriesKind },
-                    set: { self.store.send(.changeKind($0)) }
-                ),
-                label: Text(""),
-                content: {
-                    ForEach(FourierSeries.Kind.allCases, id: \.rawValue) { kind in
-                        return Text(kind.rawValue).tag(kind)
-                    }
-                }
-            )
         }
-        .padding()
     }
 }
 

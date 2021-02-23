@@ -22,6 +22,8 @@
 		0B2B5FC523703490001DE7E0 /* GraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC023703490001DE7E0 /* GraphModel.swift */; };
 		0B2B5FC623703490001DE7E0 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC123703490001DE7E0 /* Timer.swift */; };
 		0B2B5FC723703490001DE7E0 /* FourierSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B5FC223703490001DE7E0 /* FourierSeries.swift */; };
+		733A092825DDBD1200CE61BF /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A092725DDBD1200CE61BF /* ButtonsView.swift */; };
+		733A092C25DDBED500CE61BF /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A092B25DDBED500CE61BF /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		0B2B5FC123703490001DE7E0 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		0B2B5FC223703490001DE7E0 /* FourierSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourierSeries.swift; sourceTree = "<group>"; };
 		0B2B5FC823703554001DE7E0 /* SwiftUIFourierSeries.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIFourierSeries.entitlements; sourceTree = "<group>"; };
+		733A092725DDBD1200CE61BF /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		733A092B25DDBED500CE61BF /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		0B2B5FB22370345D001DE7E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				733A092725DDBD1200CE61BF /* ButtonsView.swift */,
+				733A092B25DDBED500CE61BF /* PickerView.swift */,
 				0B2B5FB323703475001DE7E0 /* ConfigView.swift */,
 				0B2B5FB423703475001DE7E0 /* EpicirclesView.swift */,
 				0B2B5FB523703475001DE7E0 /* EpicircleView.swift */,
@@ -205,11 +211,13 @@
 				0B2B5F9E23703300001DE7E0 /* AppDelegate.swift in Sources */,
 				0B2B5FC423703490001DE7E0 /* Store.swift in Sources */,
 				0B2B5FC523703490001DE7E0 /* GraphModel.swift in Sources */,
+				733A092825DDBD1200CE61BF /* ButtonsView.swift in Sources */,
 				0B2B5FC323703490001DE7E0 /* AppState.swift in Sources */,
 				0B2B5FBA23703475001DE7E0 /* EpicircleView.swift in Sources */,
 				0B2B5FA023703300001DE7E0 /* SceneDelegate.swift in Sources */,
 				0B2B5FBB23703475001DE7E0 /* GraphView.swift in Sources */,
 				0B2B5FC623703490001DE7E0 /* Timer.swift in Sources */,
+				733A092C25DDBED500CE61BF /* PickerView.swift in Sources */,
 				0B2B5FBC23703475001DE7E0 /* SeriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

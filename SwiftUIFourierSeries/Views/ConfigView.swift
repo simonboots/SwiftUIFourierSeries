@@ -3,46 +3,32 @@ import SwiftUI
 
 struct ConfigView: View {
     @ObservedObject var store: Store
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     
     var body: some View {
-        HStack {
+        // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/
+        if verticalSizeClass == .regular && horizontalSizeClass == .compact {
+            // iPhone Portrait or iPad 1/3 split view for Multitasking for instance
+            // A
+            // B
+            // C
+            VStack {
+                VStack {
+                    ButtonsView(store: store).padding()
+                    PickerView(store: store).padding()
+                }
+            }
+        } else {
+            // Landscape layout for all other size class combinations
+            // A B C
             VStack {
                 HStack {
-                    if self.store.state.timerIsRunning {
-                        Button("Pause") { self.store.send(.pause) }
-                    } else {
-                        Button("Play") { self.store.send(.play) }
-                    }
-                    Button("Reset") { self.store.send(.reset) }
+                    ButtonsView(store: store).padding()
+                    PickerView(store: store).padding()
                 }
-                .padding()
-
-                HStack {
-                    Text("Number of functions:")
-                    Button("-") { self.store.send(.decrementnumOfFunctions) }
-                        .disabled(self.store.state.numOfFunctions <= 1)
-                    Text("\(self.store.state.numOfFunctions)")
-                    Button("+") { self.store.send(.incrementnumOfFunctions) }
-                }
-                
             }
-            
-            Spacer()
-            
-            Picker(selection:
-                Binding(
-                    get: { self.store.state.seriesKind },
-                    set: { self.store.send(.changeKind($0)) }
-                ),
-                label: Text(""),
-                content: {
-                    ForEach(FourierSeries.Kind.allCases, id: \.rawValue) { kind in
-                        return Text(kind.rawValue).tag(kind)
-                    }
-                }
-            )
         }
-        .padding()
     }
 }
 
